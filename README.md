@@ -1,2 +1,5 @@
-# go-point-clustering
-(Lat, lon) points fast clustering using DBScan algorithm 
+# Point Clutering
+
+(Lat, lon) points fast clustering using DBScan algorithm in Golang.
+
+
