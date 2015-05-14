@@ -11,7 +11,7 @@ const (
 	EarthR = 6371.0
 )
 
-// DistanceSheprical is a spherical (optimized) distance between two points
+// DistanceSpherical is a spherical (optimized) distance between two points
 //
 // Result is distance in kilometers
 func DistanceSpherical(p1, p2 *Point) float64 {
@@ -52,8 +52,8 @@ func FastCos(x float64) float64 {
 	return FastSine(x)
 }
 
-// Spherical distance with fast cosine and w/o sqrt and
-// normalization to Earth radius/radians
+// DistanceSphericalFast calculates spherical distance with fast cosine
+// without sqrt and normalization to Earth radius/radians
 //
 // To get real distance in km, take sqrt and multiply result by EarthR*DegreeRad
 //

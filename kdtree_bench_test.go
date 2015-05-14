@@ -19,7 +19,7 @@ func BenchmarkInsert(b *testing.B) {
 	}
 
 	b.StartTimer()
-	var tree *KDTree = NewKDTree(nil)
+	var tree = NewKDTree(nil)
 	for _, pt := range pts {
 		tree.Insert(pt)
 	}

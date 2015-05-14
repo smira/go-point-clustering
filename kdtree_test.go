@@ -34,7 +34,7 @@ func (p Point) Generate(r *rand.Rand, _ int) reflect.Value {
 // inserted into an empty tree maintain the K-D tree invariant.
 func TestInsert(t *testing.T) {
 	if err := quick.Check(func(pts pointSlice) bool {
-		var tree *KDTree = NewKDTree(nil)
+		var tree = NewKDTree(nil)
 		for _, p := range pts {
 			tree.Insert(p)
 		}
