@@ -20,3 +20,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+-------------
+
+Part of the code: files kdtree.go, kdtree_test.go and kdtree_bench_test.go
+is adapted version of the code from https://godoc.org/code.google.com/p/eaburns/kdtree,
+which is licensed under New BSD License: http://opensource.org/licenses/BSD-3-Clause
+
+Author: Ethan Burns <burns.ethan@gmail.com>
+
