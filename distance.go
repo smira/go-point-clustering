@@ -5,9 +5,9 @@ import (
 )
 
 const (
-	// Translating from degrees to radians
+	// DegreeRad is coefficent to translate from degrees to radians
 	DegreeRad = math.Pi / 180.0
-	// Earth radius
+	// EarthR is earth radius in km
 	EarthR = 6371.0
 )
 
