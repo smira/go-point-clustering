@@ -1,7 +1,8 @@
 all: test check
 
 deps:
-	go get gopkg.in/check.v1
+	go get -v -d -t ./...
+	go get github.com/golang/lint/golint
 
 test:
 	go test -v ./... -gocheck.v
