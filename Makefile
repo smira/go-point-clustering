@@ -1,4 +1,4 @@
-ifeq ($(GOVERSION), devel)
+ifeq ($(TRAVIS_GO_VERSION), devel)
 TRAVIS_TARGET=coveralls
 else
 TRAVIS_TARGET=test
