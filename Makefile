@@ -26,7 +26,7 @@ coverage: coverage.out
 	rm -f coverage.out
 
 coveralls: coverage.out
-	goveralls -service coveralls -coverprofile=coverage.out $(COVERALLS_TOKEN)
+	goveralls -service travis-ci.org -coverprofile=coverage.out $(COVERALLS_TOKEN)
 	rm -f coverage.out
 
 check:
