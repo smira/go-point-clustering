@@ -13,6 +13,7 @@ deps:
 	go get github.com/mattn/goveralls
 
 test:
+	echo $(TRAVIS_GO_VERSION)
 	go test -v ./... -gocheck.v
 
 bench:
