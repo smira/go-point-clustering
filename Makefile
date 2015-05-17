@@ -1,4 +1,4 @@
-ifeq ($(TRAVIS_GO_VERSION), devel)
+ifeq ($(TRAVIS_GO_VERSION), tip)
 TRAVIS_TARGET=coveralls
 else
 TRAVIS_TARGET=test
@@ -13,7 +13,6 @@ deps:
 	go get github.com/mattn/goveralls
 
 test:
-	echo $(TRAVIS_GO_VERSION)
 	go test -v ./... -gocheck.v
 
 bench:
