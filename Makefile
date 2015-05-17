@@ -11,6 +11,13 @@ test:
 bench:
 	go test -v -bench=. ./... -gocheck.b
 
+coverage.out:
+	go test -coverprofile=coverage.out -covermode=count .
+
+coverage: coverage.out
+	go tool cover -html=coverage.out
+	rm -f coverage.out
+
 check:
 	go tool vet .
 	golint .
