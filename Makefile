@@ -1,15 +1,14 @@
 ifeq ($(TRAVIS_GO_VERSION), tip)
 TRAVIS_TARGET=coveralls
 else
-TRAVIS_TARGET=test
+TRAVIS_TARGET=all
 endif
 
-all: test check
+all: test check bench
 
 deps:
 	go get -v -d -t ./...
 	go get github.com/golang/lint/golint
-	go get golang.org/x/tools/cmd/vet
 	go get github.com/mattn/goveralls
 
 test:
