@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/smira/go-point-clustering.svg?branch=master)](https://travis-ci.org/smira/go-point-clustering)
 [![Coverage Status](https://coveralls.io/repos/smira/go-point-clustering/badge.svg?branch=master)](https://coveralls.io/r/smira/go-point-clustering?branch=master)
 [![GoDoc](https://godoc.org/github.com/smira/go-point-clustering?status.svg)](https://godoc.org/github.com/smira/go-point-clustering)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fsmira%2Fgo-point-clustering.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fsmira%2Fgo-point-clustering?ref=badge_shield)
 
 (Lat, lon) points fast clustering using [DBScan](https://en.wikipedia.org/wiki/DBSCAN) algorithm in Go.
 
@@ -36,3 +37,7 @@ Run DBScan:
 
 `DBScan` function returns list of clusters (each `Cluster` being reference to the list of source `points`) and list
 of point indexes which don't fit into any cluster (`noise`).
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fsmira%2Fgo-point-clustering.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fsmira%2Fgo-point-clustering?ref=badge_large)
