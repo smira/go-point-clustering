@@ -1,7 +1,7 @@
 # Point Clustering
 
 [![Build Status](https://travis-ci.org/smira/go-point-clustering.svg?branch=master)](https://travis-ci.org/smira/go-point-clustering)
-[![Coverage Status](https://coveralls.io/repos/smira/go-point-clustering/badge.svg?branch=master)](https://coveralls.io/r/smira/go-point-clustering?branch=master)
+[![codecov](https://codecov.io/gh/smira/go-point-clustering/branch/master/graph/badge.svg)](https://codecov.io/gh/smira/go-point-clustering)
 [![GoDoc](https://godoc.org/github.com/smira/go-point-clustering?status.svg)](https://godoc.org/github.com/smira/go-point-clustering)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fsmira%2Fgo-point-clustering.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fsmira%2Fgo-point-clustering?ref=badge_shield)
 
