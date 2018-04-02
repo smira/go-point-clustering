@@ -1,35 +1,18 @@
-ifeq ($(TRAVIS_GO_VERSION), tip)
-TRAVIS_TARGET=coveralls
-else
-TRAVIS_TARGET=all
-endif
-
 all: test check bench
 
 deps:
 	go get -v -d -t ./...
-	go get github.com/golang/lint/golint
-	go get github.com/mattn/goveralls
+	go get -v github.com/alecthomas/gometalinter
+	gometalinter --install
 
-test:
-	go test -v ./... -gocheck.v
+test: deps
+	go test -race -v -coverprofile=coverage.txt -covermode=atomic
 
-bench:
-	go test -v -bench=. ./... -gocheck.b
-
-coverage.out:
-	go test -coverprofile=coverage.out -covermode=count .
-
-coverage: coverage.out
-	go tool cover -html=coverage.out
-	rm -f coverage.out
-
-coveralls: coverage.out
-	goveralls -service travis-ci.org -coverprofile=coverage.out $(COVERALLS_TOKEN)
-	rm -f coverage.out
+bench: deps
+	go test -v -run ^Test$$ -bench=. ./... -gocheck.b
 
 check:
-	go tool vet .
-	golint .
+	go test -i
+	gometalinter --vendored-linters --deadline=30s --cyclo-over=16 ./...
 
-travis: $(TRAVIS_TARGET)
+.PHONY: deps test bench check
