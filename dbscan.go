@@ -37,7 +37,7 @@ type EpsFunction func(pt Point) float64
 // DBScan clusters incoming points into clusters with params (eps, minPoints)
 //
 // eps is clustering radius in km
-// minPoints in minumum number of points in eps-neighbourhood (density)
+// minPoints in minimum number of points in eps-neighbourhood (density)
 func DBScan(points PointList, eps float64, minPoints int) (clusters []Cluster, noise []int) {
 	visited := make([]bool, len(points))
 	members := make([]bool, len(points))

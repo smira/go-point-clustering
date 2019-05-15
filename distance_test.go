@@ -1,8 +1,9 @@
 package cluster
 
 import (
-	. "gopkg.in/check.v1"
 	"math"
+
+	. "gopkg.in/check.v1"
 )
 
 type DistanceSuite struct {
