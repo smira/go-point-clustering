@@ -45,7 +45,7 @@ func FastSine(x float64) float64 {
 // FastCos calculates cosinus from sinus
 func FastCos(x float64) float64 {
 	x += math.Pi / 2.0
-	if x > math.Pi {
+	for x > math.Pi {
 		x -= 2 * math.Pi
 	}
 
